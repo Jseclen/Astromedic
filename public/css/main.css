@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #FFFCE6;
+  font-family: "Quicksand", sans-serif;
+}
+
+body header {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+body header nav {
+  max-width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+body header nav .logo h1 {
+  color: #506AD4;
+  font-size: 30px;
+}
+
+body header nav .logo h1 span {
+  color: #A3CDD9;
+}
+
+body header nav .menu {
+  cursor: pointer;
+  position: relative;
+}
+
+body header nav .menu:hover p {
+  border-bottom: 1px solid #000;
+}
+
+body header nav .menu:hover ul {
+  display: block;
+}
+
+body header nav .menu ul {
+  display: none;
+  position: absolute;
+  background: #FFFCE6;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+body header nav .menu ul li {
+  padding: 10px;
+  width: 100px;
+}
+
+body header nav .menu ul li.separator {
+  padding: 0;
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+body section.principal {
+  max-width: 80%;
+  margin: auto;
+}
+
+body section.principal .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+  vertical-align: middle;
+}
+
+body section.principal .menu article {
+  width: 30%;
+}
+
+body section.principal .menu article a {
+  display: block;
+  padding: 50px;
+  background: #A3CDD9;
+  width: 300px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin: auto;
+}
+
+body section.principal .menu article a:hover {
+  background: #506AD4;
+}
+
+body section.principal .formulario .box {
+  padding: 35px 0;
+}
+
+@media (max-width: 767px) {
+  body section.principal .formulario .box {
+    width: 70%;
+  }
+}
+
+body section.principal .formulario .box .button {
+  font-size: 1em;
+  padding: 10px;
+  background: #A3CDD9;
+  color: #fff;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+body section.principal .formulario .box .button:hover {
+  background: #506AD4;
+}
+
+body section.principal .formulario .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  overflow: scroll;
+}
+
+body section.principal .formulario .overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+body section.principal .formulario .overlay .popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  body section.principal .formulario .overlay .popup {
+    width: 70%;
+  }
+}
+
+body section.principal .formulario .overlay .popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+body section.principal .formulario .overlay .popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+body section.principal .formulario .overlay .popup .close:hover {
+  color: #06D85F;
+}
+
+body section.principal .formulario .overlay .popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+body section.principal .formulario .overlay .popup .content input, body section.principal .formulario .overlay .popup .content select {
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  outline: none;
+}
+
+body section.principal .formulario .overlay .popup .content p {
+  margin-bottom: 10px;
+}
+
+body section.principal .formulario .overlay .popup .content .consulta {
+  text-align: right;
+}
+
+body section.principal .formulario .overlay .popup .content .datos > div {
+  margin-bottom: 10px;
+  display: -ms-grid;
+  display: grid;
+}
+
+body section.principal .formulario .overlay .popup .content .datos > div.personales {
+  -ms-grid-columns: 60% 39%;
+      grid-template-columns: 60% 39%;
+  grid-gap: 1%;
+}
+
+@media (max-width: 767px) {
+  body section.principal .formulario .overlay .popup .content .datos > div.personales {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
+body section.principal .formulario .overlay .popup .content .datos > div.cronologia {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1%;
+}
+
+@media (max-width: 767px) {
+  body section.principal .formulario .overlay .popup .content .datos > div.cronologia {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
+body section.principal .formulario .overlay .popup .content .datos > div.direccion {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1%;
+}
+
+@media (max-width: 767px) {
+  body section.principal .formulario .overlay .popup .content .datos > div.direccion {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
+body section.principal .formulario .overlay .popup .content .signos > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1%;
+  grid-row-gap: 10px;
+}
+
+@media (max-width: 767px) {
+  body section.principal .formulario .overlay .popup .content .signos > div {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
+body section.principal .formulario .overlay .popup .content .button {
+  text-align: center;
+  margin-top: 10px;
+}
+
+body section.principal .formulario .overlay .popup .content .button input {
+  background: #A3CDD9;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+body section.principal .formulario .overlay .popup .content .button input:hover {
+  background: #506AD4;
+}
+
+body section.principal .listado table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+body section.principal .listado table td {
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */
